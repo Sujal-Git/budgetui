@@ -17,17 +17,20 @@ const Dashboard = () => {
     }
   };
 
-  const handleDeleteExpense = (index) => {
-    const updatedExpenses = loggedInUser.expenses.filter((_, i) => i !== index);
-    // Update user context and localStorage
-    const updatedUser = { ...loggedInUser, expenses: updatedExpenses };
-    const updatedUsers = JSON.parse(localStorage.getItem('users')).map(user =>
-      user.username === loggedInUser.username ? updatedUser : user
-    );
-    localStorage.setItem('users', JSON.stringify(updatedUsers));
-    localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
- 
-  };
+const handleDeleteExpense = (index) => {
+  // Use the deleteExpense function from ExpenseContext to update expenses
+  deleteExpense(index);
+
+  // Also update localStorage if needed
+  const updatedExpenses = loggedInUser.expenses.filter((_, i) => i !== index);
+  const updatedUser = { ...loggedInUser, expenses: updatedExpenses };
+  const updatedUsers = JSON.parse(localStorage.getItem('users')).map(user =>
+    user.username === loggedInUser.username ? updatedUser : user
+  );
+  localStorage.setItem('users', JSON.stringify(updatedUsers));
+  localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
+};
+
 
   const handleLogout = () => {
     logoutUser();
