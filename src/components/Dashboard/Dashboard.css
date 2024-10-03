@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #171717;
+  color: #ffffff;
+}
+
+.dashboard {
+  text-align: center;
+  padding: 20px;
+}
+
+h2, h3, h4 {
+  color: #af24ff;
+}
+
+/* Welcome quote trigger for sign-out */
+.welcome-quote {
+  font-size: 2.5em; /* Increased size of the welcome quote */
+  color: #af24ff;
+  cursor: pointer; /* Add pointer to indicate clickability */
+  margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+
+.welcome-quote:hover {
+  color: #ffffff; /* Highlight effect on hover */
+}
+
+/* Expense form aligned side by side */
+.expense-form {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add some space between inputs */
+}
+
+/* Inputs aligned next to each other with same width */
+.input {
+  padding: 10px;
+  background-color: #333333;
+  border: 1px solid #7e14db;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 250px; /* Ensure both inputs have the same width */
+}
+
+/* Submit button for adding expenses */
+.button {
+  padding: 10px 20px;
+  background-color: #7e14db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #af24ff;
+  transform: translateY(-2px);
+}
+
+/* Expense list and items */
+.expense-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333333;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  width: 400px;
+  color: #ffffff;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #7e14db;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #af24ff;
+}
+
+/* Report section styling */
+.report {
+  margin-top: 30px;
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
+}

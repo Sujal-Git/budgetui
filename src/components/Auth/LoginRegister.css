@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #171717;
+  color: #ffffff;
+}
+
+.login-register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: #262626; /* Softer contrast for the card */
+  padding: 60px; /* Increased padding for a larger card */
+  border-radius: 15px; /* Softer rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for more depth */
+  width: 350px; /* Larger width for the card */
+  text-align: center;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  padding: 15px; /* Larger padding for input fields */
+  margin: 15px 0; /* More spacing between input fields */
+  width: 100%;
+  border: 1px solid #7e14db;
+  background-color: #1f1f1f; /* Darker background for inputs */
+  color: #ffffff;
+  border-radius: 8px; /* Softer rounded corners for inputs */
+  font-size: 1.1em; /* Larger font size for input fields */
+}
+h1{
+  color: #7e14db;
+}
+
+button {
+  padding: 15px 30px; /* Larger buttons */
+  background-color: #7e14db;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px; /* Softer corners for buttons */
+  cursor: pointer;
+  font-size: 1.1em; /* Larger font size for the buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #af24ff;
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Ensure everything is centered correctly */
+html, body {
+  height: 100%;
+}

@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #171717;
+  color: #eaeaea;
+}
+
+h5 {
+  color: #d7d7d7;
+  position: absolute;
+  left: 85%;
+  top: 90%;
+}
+
+h5 a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensures elements are above the background balls */
+}
+
+.logo {
+  cursor: pointer;
+  font-size: 4em; /* Larger logo size */
+  color: #b43cff;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.quote-container {
+  margin-bottom: 40px;
+  z-index: 3;
+}
+
+.quote {
+  font-size: 1.8em; /* Slightly smaller than the logo */
+  margin: 0 10px;
+  color: #f3f3f3;
+  font-family: 'Times New Roman', Times, serif;
+  z-index: 3;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 3;
+}
+
+.home-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: #7a43c7;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.home-button:hover {
+  background-color: #7e6bb3;
+  transform: translateY(-2px);
+}
+
+.ball1, .ball2, .ball3 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  z-index: 1; /* Balls are behind all other elements */
+}
+
+.ball1 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #5a4a9c, #33334d);
+  top: 10%;
+  left: 20%;
+}
+
+.ball2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, #5a4a9c, #7e6bb3);
+  bottom: 15%;
+  right: 15%;
+}
+
+.ball3 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #5a4a9c, #444);
+  bottom: 20%;
+  left: 30%;
+}
