@@ -26,7 +26,7 @@ const Dashboard = () => {
     );
     localStorage.setItem('users', JSON.stringify(updatedUsers));
     localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
-    window.location.reload(); // Reload to update the UI
+ 
   };
 
   const handleLogout = () => {
