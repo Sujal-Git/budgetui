@@ -11,7 +11,7 @@ const LandingPage = () => {
         BudgetUI
       </div>
       <div className="quote-container">
-        <p className="quote">"Budget ui Money anytime Anywhere"</p> {/* Money-related quote */}
+        <p className="quote">"Budget ui Money Management anytime Anywhere"</p> {/* Money-related quote */}
       </div>
       <div className="button-container">
         <button className="home-button" onClick={() => navigate('/login')}>
