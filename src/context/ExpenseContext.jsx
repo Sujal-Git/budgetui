@@ -1,3 +1,4 @@
+// ExpenseContext.jsx
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { UserContext } from './UserContext';
 
