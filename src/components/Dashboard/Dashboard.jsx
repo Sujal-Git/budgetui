@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../../context/UserContext';
 import { ExpenseContext } from '../../context/ExpenseContext'; // Import ExpenseContext
+const { deleteExpense } = useContext(ExpenseContext);
+
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 
