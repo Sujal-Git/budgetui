@@ -1,22 +1,13 @@
-// ExpenseContext.jsx
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { UserContext } from './UserContext';
+import React, { createContext, useState } from 'react';
 
+// Create the ExpenseContext
 export const ExpenseContext = createContext();
 
-const ExpenseProvider = ({ children }) => {
-  const { currentUser } = useContext(UserContext);
+export const ExpenseProvider = ({ children }) => {
   const [expenses, setExpenses] = useState([]);
 
-  useEffect(() => {
-    if (currentUser) {
-      setExpenses(currentUser.expenses || []);
-    }
-  }, [currentUser]);
-
   const addExpense = (title, amount) => {
-    const newExpense = { title, amount: parseFloat(amount) };
-    setExpenses(prevExpenses => [...prevExpenses, newExpense]);
+    setExpenses(prevExpenses => [...prevExpenses, { title, amount }]);
   };
 
   const deleteExpense = (index) => {
@@ -24,10 +15,8 @@ const ExpenseProvider = ({ children }) => {
   };
 
   return (
-    <ExpenseContext.Provider value={{ expenses, addExpense, deleteExpense }}>
+    <ExpenseContext.Provider value={{ expenses, setExpenses, addExpense, deleteExpense }}>
       {children}
     </ExpenseContext.Provider>
   );
 };
-
-export default ExpenseProvider;
