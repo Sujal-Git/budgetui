@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <div className="home-container">
       <div className="logo">
-      Coming soon
+     BudgetUI
       </div>
       <div className="quote-container">
         <p className="quote">"Budget ui Money Management anytime Anywhere"</p> {/* Money-related quote */}
